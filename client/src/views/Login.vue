@@ -74,7 +74,7 @@ export default {
         username: "",
             //    username: "emasil@email.com",
         usernameRules: [
-            v => !!v || "E-mail is required",
+            v => !!v || "User is required",
         ],
         // password: "123456",
           password: "",
