@@ -1,11 +1,14 @@
 <template>
   <div>
-    <p> <i class="fa fa-dashcube" aria-hidden="true"></i></p>
+    <p> TEST </p>
   </div>
 </template>
 
 <script>
+
 export default {
+
+
 
 }
 </script>

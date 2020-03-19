@@ -6,6 +6,7 @@ import vuetify from './plugins/vuetify';
 import axios from 'axios'
 import 'nprogress/nprogress.css'
 
+
 Vue.config.productionTip = false
 
 new Vue({
@@ -29,6 +30,9 @@ new Vue({
       }
     )
   },
+  
 
   render: h => h(App)
 }).$mount('#app')
+
+

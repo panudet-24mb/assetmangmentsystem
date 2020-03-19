@@ -73,7 +73,7 @@ class UserController extends BaseController
 
             return $this->responseRequestSuccess($user);
         } else {
-            return $this->responseRequestError401("Username or password is incorrect");
+            return $this->responseRequestError400("Username or password is incorrect");
         }
     }
 
@@ -137,7 +137,7 @@ class UserController extends BaseController
     | response 401
     |--------------------------------------------------------------------------
      */
-    protected function responseRequestError401($message = 'Bad request', $statusCode = 401)
+    protected function responseRequestError400($message = 'Bad request', $statusCode = 400)
     {
         return response()->json(['status' => 'error', 'error' => $message], $statusCode)
             ->header('Access-Control-Allow-Origin', '*')

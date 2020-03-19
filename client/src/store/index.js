@@ -6,7 +6,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: null
+    user: null,
+    loader: {
+      login :false
+    }
   },
   mutations: {
     SET_USER_DATA(state, userData) {
@@ -20,7 +23,10 @@ export default new Vuex.Store({
     CLEAR_USER_DATA() {
       localStorage.removeItem('user')
       location.reload()
-    }
+    },
+    LOADER(state, payload) {
+      state.loader.login = payload;
+    },
   },
   actions: {
     register({
