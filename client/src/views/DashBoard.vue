@@ -13,7 +13,7 @@ export default {
 methods:{
   
 getword(){
-  apiClient.get('/todos/1')
+  apiClient.get('/user/infomation')
   .then(function (response) {
     // handle success
     console.log(response);
@@ -25,7 +25,7 @@ getword(){
 },
 
 },
-mounted(){
+created(){
 
  this.getword()
 
