@@ -1,11 +1,37 @@
 <template>
   <div>
-    <p> <i class="fa fa-dashcube" aria-hidden="true"></i></p>
+    
   </div>
 </template>
 
 <script>
+import apiClient from '@/services/AxiosService'
+
+
 export default {
+
+methods:{
+  
+getword(){
+  apiClient.get('/todos/1')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+},
+
+},
+mounted(){
+
+ this.getword()
+
+}
+
+
 
 }
 </script>

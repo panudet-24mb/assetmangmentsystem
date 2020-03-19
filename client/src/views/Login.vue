@@ -1,5 +1,7 @@
 <template>
-  <v-app id="inspire">
+<div>
+  <LoadingPartials/>
+   <v-app id="inspire">
     <v-content>
       <v-container
         class="fill-height"
@@ -20,7 +22,7 @@
                 dark
                 flat
               >
-                <v-toolbar-title>Login form</v-toolbar-title>
+                <v-toolbar-title>ระบบจัดการทรัพย์สิน</v-toolbar-title>
                 <v-spacer />
              
               </v-toolbar>
@@ -58,11 +60,17 @@
       </v-container>
     </v-content>
   </v-app>
+</div>
+ 
 </template>
 
  
 <script>
+import LoadingPartials from '../components/Partials/_loader'
 export default {
+    components:{
+      LoadingPartials
+    },
     props: {
         source: String
     },
@@ -71,8 +79,8 @@ export default {
         drawer: null,
         snackbar:false,
         valid: true,
-        username: "",
-            //    username: "emasil@email.com",
+        // username: "",
+               username: "emasil@email.com",
         usernameRules: [
             v => !!v || "User is required",
         ],
@@ -87,17 +95,21 @@ export default {
     }),
     methods: {
     login () {
+      this.$store.commit("LOADER", true);
       this.$store
         .dispatch('login', {
           username: this.username,
           password: this.password
         })
         .then(() => {
+          this.$store.commit("LOADER", false);
           this.$router.push({ name: 'dashboard' })
         })
         .catch(err => {
+          
           this.error_message = err.response.data.error
-          console.log(this.error_message)
+          console.log(err)
+          this.$store.commit("LOADER", false);
            this.snackbar=true;
         })
     },

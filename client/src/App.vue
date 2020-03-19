@@ -1,13 +1,13 @@
 <template>
 
-  <v-app teal>
-    <!-- <NavBar /> -->
-    <v-content>
+  <v-app>
+
+      
       <router-view />
           
-    </v-content>
+
     <v-footer color="blue darken-4" app>
-      <span class="white--text">© 2019</span>
+      <span class="white--text">Nok Soft ©2020</span>
     </v-footer>
   </v-app>
 </template>
