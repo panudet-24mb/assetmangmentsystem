@@ -1,9 +1,10 @@
 import axios from 'axios'
 import NProgress from 'nprogress' // <--- Import the library
+import env from '../env/index.js';
 
 
 const apiClient = axios.create({
-  baseURL: `https://jsonplaceholder.typicode.com/`,
+  baseURL: env.API_URL,
   withCredentials: false, // This is the default
   headers: {
     Accept: 'application/json',
