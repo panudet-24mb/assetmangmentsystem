@@ -8,12 +8,9 @@ export const state = {
 }
   export const mutations = {
     SET_USER_DATA(state, userData) {
-
       state.user = userData
       localStorage.setItem('user', userData)
-      axios.defaults.headers.common['Authorization'] = `${
-        userData
-      }`
+      axios.defaults.headers.common['Authorization'] = `${userData}`
     },
     CLEAR_USER_DATA() {
       localStorage.removeItem('user')

@@ -4,17 +4,15 @@ import * as user from '@/store/modules/user.js';
 // change to module
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store =  new Vuex.Store({
   modules: {
     user,
-  
   },
   state: {
      loader: {
        login: false
      }
   },
-
   mutations: {
       LOADER(state, payload) {
         state.loader.login = payload;
@@ -23,3 +21,5 @@ export default new Vuex.Store({
   
   
 })
+
+export default store
