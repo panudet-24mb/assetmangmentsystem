@@ -44,7 +44,7 @@ router.beforeEach((to, from, next) => {
     next('/')
   }
   next()
-   NProgress.done() //test
+   NProgress.done() //test axios
 })
 
 
