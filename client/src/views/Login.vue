@@ -20,7 +20,7 @@
                 dark
                 flat
               >
-                <v-toolbar-title>Login form</v-toolbar-title>
+                <v-toolbar-title>ระบบจัดการทรัพย์สิน</v-toolbar-title>
                 <v-spacer />
              
               </v-toolbar>
