@@ -11,10 +11,10 @@ export default new Vuex.Store({
   mutations: {
     SET_USER_DATA(state, userData) {
 
-      state.user = userData.data.api_token
-      localStorage.setItem('user', userData.data.api_token)
+      state.user = userData
+      localStorage.setItem('user', userData)
       axios.defaults.headers.common['Authorization'] = `${
-        userData.data.api_token
+        userData
       }`
     },
     CLEAR_USER_DATA() {
@@ -40,7 +40,8 @@ export default new Vuex.Store({
         .then(({
           data
         }) => {
-          commit('SET_USER_DATA', data)
+            let user_api = data.data.api_token
+          commit('SET_USER_DATA', user_api)
         })
     },
     logout({

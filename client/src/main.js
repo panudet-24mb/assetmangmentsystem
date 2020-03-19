@@ -15,8 +15,8 @@ new Vue({
     const userString = localStorage.getItem('user')
     // console.log(userString)
     if (userString) {
-      const userData = JSON.parse(userString)
-      this.$store.commit('SET_USER_DATA', userData)
+
+      this.$store.commit('SET_USER_DATA', userString)
     }
     axios.interceptors.response.use(
       response => response,
