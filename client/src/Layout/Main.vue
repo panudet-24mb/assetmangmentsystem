@@ -148,8 +148,8 @@
           model: false,
           children: [
           { text: "บริษัท", link: "/settings/company" },
-          { text: "สาขา", link: "/setting/branch" },
-          { text: "แผนก", link: "/setting/department" },
+          { text: "สาขา", link: "/settings/branch" },
+          { text: "แผนก", link: "/settings/department" },
           { text: "กลุ่มครุภัณฑ์", link: "/assets/overview" },
           { text: "อาคาร", link: "/assets/overview" },
           { text: "ชั้น", link: "/assets/overview" },

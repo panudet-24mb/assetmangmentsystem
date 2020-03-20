@@ -6,6 +6,7 @@ import Home from "@/views/Home.vue";
 import NProgress from 'nprogress'
 import MainLayout from '../Layout/Main'
 import CompanySetting from "@/views/settings/company.vue";
+import BranchSetting from "@/views/settings/branch.vue";
 
 Vue.use(Router);
 
@@ -55,7 +56,13 @@ let router = new Router({
            name: "company_settings",
            component: CompanySetting,
 
-         }
+         },
+           {
+             path: "branch",
+             name: "branch_settings",
+             component: BranchSetting,
+
+           }
 
        ],
      },
