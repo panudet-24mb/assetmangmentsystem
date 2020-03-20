@@ -140,16 +140,16 @@
       dialog: false,
       drawer: null,
        items: [
-        { icon: 'mdi-contacts', text: 'หน้าหลัก', link:'/dashboard'},
+        { icon: 'mdi-contacts', text: 'หน้าหลัก', link:'/dashboard/'},
         {
           icon: 'mdi-chevron-up',
           'icon-alt': 'mdi-cogs',
           text: 'ตั้งค่า',
           model: false,
           children: [
-          { text: "บริษัท", link: "/dashboard/company_settings" },
-          { text: "สาขา", link: "/setting/branch" },
-          { text: "แผนก", link: "/setting/department" },
+          { text: "บริษัท", link: "/settings/company" },
+          { text: "สาขา", link: "/settings/branch" },
+          { text: "แผนก", link: "/settings/department" },
           { text: "กลุ่มครุภัณฑ์", link: "/assets/overview" },
           { text: "อาคาร", link: "/assets/overview" },
           { text: "ชั้น", link: "/assets/overview" },

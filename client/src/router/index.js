@@ -6,6 +6,7 @@ import Home from "@/views/Home.vue";
 import NProgress from 'nprogress'
 import MainLayout from '../Layout/Main'
 import CompanySetting from "@/views/settings/company.vue";
+import BranchSetting from "@/views/settings/branch.vue";
 
 Vue.use(Router);
 
@@ -37,15 +38,34 @@ let router = new Router({
            component: DashBoard,
 
          },
-        {
-          path: "company_settings",
-          name: "company_settings",
-          component: CompanySetting,
-        
-        }
-
       ],
     },
+     {
+       path: "/settings",
+       component: MainLayout,
+       meta: {
+         requiresAuth: true
+       },
+       children: [{
+           path: "/",
+           component: DashBoard,
+
+         },
+         {
+           path: "company",
+           name: "company_settings",
+           component: CompanySetting,
+
+         },
+           {
+             path: "branch",
+             name: "branch_settings",
+             component: BranchSetting,
+
+           }
+
+       ],
+     },
  
   ]
 });

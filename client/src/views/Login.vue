@@ -103,7 +103,9 @@ export default {
         })
         .then(() => {
           this.$store.commit("LOADER", false);
-          this.$router.push({ name: 'dashboard' })
+          // this.$router.reload();
+          window.location.href="/dashboard";
+          // this.$router.push('/dashboard');
         })
         .catch(err => {
           
