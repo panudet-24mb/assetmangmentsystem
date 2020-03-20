@@ -32,7 +32,7 @@
             :key="item.text"
             v-model="item.model"
             :prepend-icon="item.model ? item.icon : item['icon-alt']"
-            append-icon=""
+            append-icon=""   
           >
             <template v-slot:activator>
               <v-list-item-content>
@@ -44,7 +44,9 @@
             <v-list-item
               v-for="(child, i) in item.children"
               :key="i"
+              :to="child.link"
               link
+           
             >
               <v-list-item-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
@@ -59,6 +61,7 @@
           <v-list-item
             v-else
             :key="item.text"
+            :to="item.link"
             link
           >
             <v-list-item-action>
@@ -85,7 +88,7 @@
         style="width: 300px"
         class="ml-0 pl-4"
       >
-        <span class="hidden-sm-and-down">Google Contacts</span>
+        <span class="hidden-sm-and-down">ระบบจัดการทรัพท์สิน</span>
       </v-toolbar-title>
       <v-text-field
         flat
@@ -123,99 +126,7 @@
           
   
     </v-content>
-    <v-btn
-      bottom
-      color="pink"
-      dark
-      fab
-      fixed
-      right
-      @click="dialog = !dialog"
-    >
-      <v-icon>mdi-plus</v-icon>
-    </v-btn>
-    <v-dialog
-      v-model="dialog"
-      width="800px"
-    >
-      <v-card>
-        <v-card-title class="grey darken-2">
-          Create contact
-        </v-card-title>
-        <v-container>
-          <v-row class="mx-2">
-            <v-col
-              class="align-center justify-space-between"
-              cols="12"
-            >
-              <v-row
-                align="center"
-                class="mr-0"
-              >
-                <v-avatar
-                  size="40px"
-                  class="mx-3"
-                >
-                  <img
-                    src="//ssl.gstatic.com/s2/oz/images/sge/grey_silhouette.png"
-                    alt=""
-                  >
-                </v-avatar>
-                <v-text-field
-                  placeholder="Name"
-                />
-              </v-row>
-            </v-col>
-            <v-col cols="6">
-              <v-text-field
-                prepend-icon="mdi-account-card-details-outline"
-                placeholder="Company"
-              />
-            </v-col>
-            <v-col cols="6">
-              <v-text-field
-                placeholder="Job title"
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-text-field
-                prepend-icon="mdi-mail"
-                placeholder="Email"
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-text-field
-                type="tel"
-                prepend-icon="mdi-phone"
-                placeholder="(000) 000 - 0000"
-              />
-            </v-col>
-            <v-col cols="12">
-              <v-text-field
-                prepend-icon="mdi-text"
-                placeholder="Notes"
-              />
-            </v-col>
-          </v-row>
-        </v-container>
-        <v-card-actions>
-          <v-btn
-            text
-            color="primary"
-          >More</v-btn>
-          <v-spacer />
-          <v-btn
-            text
-            color="primary"
-            @click="dialog = false"
-          >Cancel</v-btn>
-          <v-btn
-            text
-            @click="dialog = false"
-          >Save</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+   
   </v-app>
 </template>
 
@@ -228,37 +139,31 @@
     data: () => ({
       dialog: false,
       drawer: null,
-      items: [
-        { icon: 'mdi-contacts', text: 'Contacts' },
-        { icon: 'mdi-history', text: 'Frequently contacted' },
-        { icon: 'mdi-content-copy', text: 'Duplicates' },
+       items: [
+        { icon: 'mdi-contacts', text: 'หน้าหลัก', link:'/dashboard'},
         {
           icon: 'mdi-chevron-up',
-          'icon-alt': 'mdi-chevron-down',
-          text: 'Labels',
-          model: true,
-          children: [
-            { icon: 'mdi-plus', text: 'Create label' },
-          ],
-        },
-        {
-          icon: 'mdi-chevron-up',
-          'icon-alt': 'mdi-chevron-down',
-          text: 'More',
+          'icon-alt': 'mdi-cogs',
+          text: 'ตั้งค่า',
           model: false,
           children: [
-            { text: 'Import' },
-            { text: 'Export' },
-            { text: 'Print' },
-            { text: 'Undo changes' },
-            { text: 'Other contacts' },
+          { text: "บริษัท", link: "/dashboard/company_settings" },
+          { text: "สาขา", link: "/setting/branch" },
+          { text: "แผนก", link: "/setting/department" },
+          { text: "กลุ่มครุภัณฑ์", link: "/assets/overview" },
+          { text: "อาคาร", link: "/assets/overview" },
+          { text: "ชั้น", link: "/assets/overview" },
+          { text: "ห้อง", link: "/assets/overview" },
+          { text: "สถานที่", link: "/assets/overview" },
+          { text: "ยี่ห้อ / แบรนด์", link: "/assets/overview" },
+          { text: "โมเดลรุ่น/แบบ/สี", link: "/assets/overview" },
+          { text: "ผู้จัดจำหน่าย", link: "/assets/groupsetting" },
+          { text: "สถานะ", link: "/assets/groupsetting" }
+           
           ],
         },
-        { icon: 'mdi-settings', text: 'Settings' },
-        { icon: 'mdi-message', text: 'Send feedback' },
-        { icon: 'mdi-help-circle', text: 'Help' },
-        { icon: 'mdi-cellphone-link', text: 'App downloads' },
-        { icon: 'mdi-keyboard', text: 'Go to the old version' },
+
+        { icon: 'mdi-account-cog', text: 'ตั้งค่าผู้ใช้งาน' ,link:'/users/permission' },
       ],
     }),
   }
