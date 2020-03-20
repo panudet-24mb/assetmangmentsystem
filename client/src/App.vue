@@ -26,3 +26,17 @@ export default {
     
 };
 </script>
+
+
+<style>
+
+#nprogress .bar {
+  background: rgb(38, 184, 45);
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+</style>

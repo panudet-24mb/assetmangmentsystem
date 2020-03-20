@@ -1,12 +1,11 @@
 import Vue from "vue";
 import Router from "vue-router";
+import DashBoard from "@/views/DashBoard.vue";
 import Login from "@/views/Login.vue";
-import Dashboard from "@/views/DashBoard.vue";
 import Home from "@/views/Home.vue";
 import NProgress from 'nprogress'
 import MainLayout from '../Layout/Main'
-
-
+import CompanySetting from "@/views/settings/company.vue";
 
 Vue.use(Router);
 
@@ -26,19 +25,25 @@ let router = new Router({
        component: Login,
       
      },
-    {
+     {
       path: "/dashboard",
-      name: "dashboard",
       component: MainLayout,
-      children: [
-        {
-          path: "",
-          component: Dashboard,
-          meta: {
-            requiresAuth: true
-          }
+      meta: {
+        requiresAuth: true
+      },
+       children: [
+         {
+           path: "/",
+           component: DashBoard,
 
+         },
+        {
+          path: "company_settings",
+          name: "company_settings",
+          component: CompanySetting,
+        
         }
+
       ],
     },
  
