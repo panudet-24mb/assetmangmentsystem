@@ -1,19 +1,17 @@
-
-import store from '../store'
-import axios from 'axios'
-import NProgress from 'nprogress' // <--- Import the library
 import env from '../env/index.js';
+import NProgress from 'nprogress'
+import axios from 'axios'
+import store from '../store'
 
-const token = localStorage.getItem('user');
-
-
+const token = localStorage.getItem('user')
+console.log(token)
 const apiClient = axios.create({
   baseURL: env.API_URL,
-  withCredentials: false, // This is the default
+  withCredentials: false, 
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'Authorization' : token
+    'Authorization': token
   }
 })
 

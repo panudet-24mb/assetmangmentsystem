@@ -13,11 +13,11 @@ new Vue({
   store,
   vuetify,
   created() {
-    
     const userString = localStorage.getItem('user')
     if (userString) {
       this.$store.commit('SET_USER_DATA', userString)
     }
+   
   
   },
   

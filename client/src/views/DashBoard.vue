@@ -5,37 +5,27 @@
 </template>
 
 <script>
-import apiClient from '@/services/AxiosService'
-
-
+// import apiClient from '@/services/AxiosService'
 export default {
-
-methods:{
+// methods:{
   
-getword(){
-  apiClient.get('/user/infomation')
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-},
-
-},
-created(){
-
- this.getword()
-
-}
-
-
-
+// getword(){
+//   apiClient.get('/user/infomation')
+//   .then(function (response) {
+//     // handle success
+//     console.log(response);
+//   })
+//   .catch(function (error) {
+//     // handle error
+//     console.log(error);
+//   })
+// },
+// },
+// created(){
+//  this.getword()
+// }
 }
 </script>
 
 <style>
-
 </style>

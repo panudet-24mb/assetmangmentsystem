@@ -3,14 +3,12 @@ import env from '../../env/index.js'
 export const state = {
   state: {
     user: null
-
   }
 }
   export const mutations = {
     SET_USER_DATA(state, userData) {
       state.user = userData
       localStorage.setItem('user', userData)
-      axios.defaults.headers.common['Authorization'] = `${userData}`
     },
     CLEAR_USER_DATA() {
       localStorage.removeItem('user')
@@ -57,4 +55,5 @@ export const getters = {
   loggedIn(state) {
       return !!state.user
     }
-  }
+}
+  

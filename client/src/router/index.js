@@ -37,15 +37,28 @@ let router = new Router({
            component: DashBoard,
 
          },
-        {
-          path: "company_settings",
-          name: "company_settings",
-          component: CompanySetting,
-        
-        }
-
       ],
     },
+     {
+       path: "/settings",
+       component: MainLayout,
+       meta: {
+         requiresAuth: true
+       },
+       children: [{
+           path: "/",
+           component: DashBoard,
+
+         },
+         {
+           path: "company",
+           name: "company_settings",
+           component: CompanySetting,
+
+         }
+
+       ],
+     },
  
   ]
 });

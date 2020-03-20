@@ -103,7 +103,7 @@ export default {
         })
         .then(() => {
           this.$store.commit("LOADER", false);
-          this.$router.push({ name: 'dashboard' })
+          this.$router.push('/dashboard')
         })
         .catch(err => {
           
