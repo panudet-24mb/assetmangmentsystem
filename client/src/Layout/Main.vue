@@ -104,23 +104,17 @@
       </v-btn>
       <v-btn icon>
         <v-icon>mdi-bell</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        large
-      >
-        <v-avatar
-          size="32px"
-          item
-        >
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/logos/logo.svg"
-            alt="Vuetify"
-          /></v-avatar>
-      </v-btn>
+      </v-btn> 
+
+      <MenuProfile/>
+      
+
+
     </v-app-bar>
+    
     <v-content>
 
+       <Navigator/>
  
       <router-view />
           
@@ -131,7 +125,13 @@
 </template>
 
 <script>
+  import MenuProfile from '../components/Menus/LogoutMenu'
+  import Navigator from '../components/Breadcrumbs/Navigator'
   export default {
+    components:{
+      MenuProfile,Navigator
+
+    },
     name : 'MainLayout',
     props: {
       source: String,
