@@ -30,7 +30,8 @@ let router = new Router({
       path: "/dashboard",
       component: MainLayout,
       meta: {
-        requiresAuth: true
+        requiresAuth: true,
+       
       },
        children: [
          {
@@ -55,6 +56,13 @@ let router = new Router({
            path: "company",
            name: "company_settings",
            component: CompanySetting,
+           meta: {
+             breadcrumb: [
+               { name: 'หน้าหลัก' ,  link: '/dashboard'},
+               { name: 'ตั้งค่า' },
+               { name: 'บริษัท' }
+             ]
+           }
 
          },
            {
