@@ -88,7 +88,7 @@
         style="width: 300px"
         class="ml-0 pl-4"
       >
-        <span class="hidden-sm-and-down">ระบบจัดการทรัพท์สิน</span>
+        <span class="hidden-sm-and-down">ระบบจัดการทรัพย์สิน</span>
       </v-toolbar-title>
       <v-text-field
         flat
@@ -148,17 +148,17 @@
           model: false,
           children: [
           { text: "บริษัท", link: "/settings/company" },
-          { text: "สาขา", link: "/setting/branch" },
-          { text: "แผนก", link: "/setting/department" },
-          { text: "กลุ่มครุภัณฑ์", link: "/assets/overview" },
-          { text: "อาคาร", link: "/assets/overview" },
-          { text: "ชั้น", link: "/assets/overview" },
-          { text: "ห้อง", link: "/assets/overview" },
-          { text: "สถานที่", link: "/assets/overview" },
-          { text: "ยี่ห้อ / แบรนด์", link: "/assets/overview" },
-          { text: "โมเดลรุ่น/แบบ/สี", link: "/assets/overview" },
-          { text: "ผู้จัดจำหน่าย", link: "/assets/groupsetting" },
-          { text: "สถานะ", link: "/assets/groupsetting" }
+          { text: "สาขา", link: "/settings/branch" },
+          { text: "แผนก", link: "/settings/department" },
+          { text: "กลุ่มครุภัณฑ์", link: "/settings/articles" },
+          { text: "อาคาร", link: "/settings/building" },
+          { text: "ชั้น", link: "/settings/floor" },
+          { text: "ห้อง", link: "/settings/room" },
+          { text: "สถานที่", link: "/settings/venue" },
+          { text: "ยี่ห้อ", link: "/settings/brand" },
+          { text: "โมเดลรุ่น/แบบ/สี", link: "/settings/model" },
+          { text: "ผู้จัดจำหน่าย", link: "/settings/dealer" },
+          { text: "สถานะ", link: "/settings/status" }
            
           ],
         },
