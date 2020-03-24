@@ -31,12 +31,19 @@ let router = new Router({
       component: MainLayout,
       meta: {
         requiresAuth: true,
-       
       },
        children: [
          {
            path: "/",
            component: DashBoard,
+             meta: {
+               breadcrumb: [{
+                   name: 'หน้าหลัก',
+                   link: '/dashboard'
+                 },
+                 
+               ]
+             }
 
          },
       ],
@@ -45,11 +52,11 @@ let router = new Router({
        path: "/settings",
        component: MainLayout,
        meta: {
-         requiresAuth: true
+         requiresAuth: true,
        },
        children: [{
            path: "/",
-           component: DashBoard,
+         component: DashBoard,
 
          },
          {
@@ -69,6 +76,19 @@ let router = new Router({
              path: "branch",
              name: "branch_settings",
              component: BranchSetting,
+              meta: {
+                breadcrumb: [{
+                    name: 'หน้าหลัก',
+                    link: '/dashboard'
+                  },
+                  {
+                    name: 'ตั้งค่า'
+                  },
+                  {
+                    name: 'สาขา'
+                  }
+                ]
+              }
 
            }
 

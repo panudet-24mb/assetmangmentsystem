@@ -6,7 +6,7 @@
       <router-view />
           
 
-    <v-footer color="blue darken-4" app>
+    <v-footer color="blue darken-3" app>
       <span class="white--text">Nok Soft ©2020</span>
     </v-footer>
   </v-app>
