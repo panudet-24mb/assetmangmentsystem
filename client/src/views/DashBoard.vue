@@ -1,5 +1,8 @@
 <template>
   <div>
+    <center>
+      <h1>ยินดีต้อนรับค่ะ คุณ xxx</h1>
+    </center>
     <smart-widget-grid :layout="layout">
       <smart-widget slot="0" simple>
         <div class="layout-center">
