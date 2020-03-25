@@ -12,7 +12,7 @@
           class="elevation-1"
         >
           <template v-slot:top>
-            <v-toolbar>
+            <v-toolbar flat>
               <v-toolbar-title>ห้อง</v-toolbar-title>
               <v-spacer></v-spacer>
               <v-text-field
