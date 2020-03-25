@@ -160,8 +160,20 @@ export default {
         {
           company_code: "0002",
           company_name: "Asus Inc.",
-          company_status: false,
+          company_status: true,
           company_createon: 24
+        },
+        {
+          company_code: "0003",
+          company_name: "Hewlett Packard Inc.",
+          company_status: false,
+          company_createon: 25
+        },
+        {
+          company_code: "0004",
+          company_name: "Acer Inc.",
+          company_status: false,
+          company_createon: 25
         }
       ];
 
