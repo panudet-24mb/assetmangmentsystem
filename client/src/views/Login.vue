@@ -34,8 +34,8 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer />
-                  <v-btn color="primary" :disabled="!valid" @click="login"
-                    >Login</v-btn
+                  <v-btn color="primary" :disabled="!valid" @click="login">
+                    Login</v-btn
                   >
                 </v-card-actions>
               </v-card>
@@ -144,6 +144,14 @@ export default {
     //         }
     //     });
     // }
+  },
+  mounted() {
+    let self = this;
+    window.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        self.login();
+      }
+    });
   }
 };
 </script>
