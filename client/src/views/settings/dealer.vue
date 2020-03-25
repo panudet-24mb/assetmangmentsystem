@@ -12,7 +12,7 @@
           class="elevation-1"
         >
           <template v-slot:top>
-            <v-toolbar flat color="white">
+            <v-toolbar>
               <v-toolbar-title>ผู้จัดจำหน่าย</v-toolbar-title>
               <v-spacer></v-spacer>
               <v-text-field
