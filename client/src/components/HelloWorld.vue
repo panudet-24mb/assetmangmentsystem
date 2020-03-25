@@ -17,19 +17,13 @@
 
         <p class="subheading font-weight-regular">
           Developing Mode 70/100%
-          <br>
-          <a
-            href="/login"
-            target="_blank"
-          >Login here</a>
+          <br />
+          <a href="/login" target="_blank">Login here</a>
         </p>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-<!--         <h2 class="headline font-weight-bold mb-3">
+      <v-col class="mb-5" cols="12">
+        <!--         <h2 class="headline font-weight-bold mb-3">
           What's next?
         </h2> -->
 
@@ -46,11 +40,8 @@
         </v-row>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-<!--         <h2 class="headline font-weight-bold mb-3">
+      <v-col class="mb-5" cols="12">
+        <!--         <h2 class="headline font-weight-bold mb-3">
           Important Links
         </h2> -->
 
@@ -67,11 +58,8 @@
         </v-row>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      > 
-<!--         <h2 class="headline font-weight-bold mb-3">
+      <v-col class="mb-5" cols="12">
+        <!--         <h2 class="headline font-weight-bold mb-3">
           Ecosystem
         </h2> -->
 
@@ -91,8 +79,10 @@
   </v-container>
 </template>
 
-<script>/*
+<script>
+/*
   export default {
+
     name: 'HelloWorld',
 
     data: () => ({
