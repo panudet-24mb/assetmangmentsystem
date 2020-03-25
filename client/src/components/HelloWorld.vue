@@ -92,7 +92,22 @@
 </template>
 
 <script>
+
+const amountAndPricing = [
+    { amount: 1, cost: 0.5 },
+    { amount: 40, cost: 0.45 },
+    { amount: 2, cost: 0.25 },
+    { amount: 30, cost: 0.35 },
+  ]
+
+const sorted = _.sortBy(amountAndPricing, ['amount'])
+
+console.log(sorted)
+
   export default {
+    
+
+
     name: 'HelloWorld',
 
     data: () => ({

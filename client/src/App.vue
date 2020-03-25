@@ -13,7 +13,10 @@
 </template>
  
 <script>
+import _ from 'lodash'; 
 // import NavBar from "./components/NavBar";
+
+ 
  
 export default {
     name: "App",
@@ -21,6 +24,8 @@ export default {
         // NavBar
     },
     data: () => ({
+
+      
         //
     }),
     
