@@ -6,6 +6,8 @@ import router from './router'
 import store from './store/index'
 import vuetify from './plugins/vuetify';
 import 'nprogress/nprogress.css'
+import VueSmartWidget from 'vue-smart-widget'
+Vue.use(VueSmartWidget)
 
 
 
