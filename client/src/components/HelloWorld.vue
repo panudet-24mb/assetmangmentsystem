@@ -16,12 +16,12 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
+          Developing Mode 70/100%
+          <br>
           <a
-            href="https://community.vuetifyjs.com"
+            href="/login"
             target="_blank"
-          >Discord Community</a>
+          >Login here</a>
         </p>
       </v-col>
 
@@ -29,9 +29,9 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
+<!--         <h2 class="headline font-weight-bold mb-3">
           What's next?
-        </h2>
+        </h2> -->
 
         <v-row justify="center">
           <a
@@ -50,9 +50,9 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
+<!--         <h2 class="headline font-weight-bold mb-3">
           Important Links
-        </h2>
+        </h2> -->
 
         <v-row justify="center">
           <a
@@ -70,10 +70,10 @@
       <v-col
         class="mb-5"
         cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
+      > 
+<!--         <h2 class="headline font-weight-bold mb-3">
           Ecosystem
-        </h2>
+        </h2> -->
 
         <v-row justify="center">
           <a
@@ -91,7 +91,7 @@
   </v-container>
 </template>
 
-<script>
+<script>/*
   export default {
     name: 'HelloWorld',
 
@@ -147,5 +147,5 @@
         },
       ],
     }),
-  }
+  }*/
 </script>

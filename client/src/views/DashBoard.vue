@@ -1,6 +1,6 @@
 <template>
   <div>
-    <center><h1>ทดสอบ</h1></center>
+    <center><h1>ยินดีต้อนรับค่ะ</h1></center>
   </div>
 </template>
 
