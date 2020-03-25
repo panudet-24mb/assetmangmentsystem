@@ -89,22 +89,21 @@
         class="ml-0 pl-4"
       >
         <span class="hidden-sm-and-down">ระบบจัดการทรัพย์สิน</span>
+       <SwitchTheme/>
       </v-toolbar-title>
-      <v-text-field
-        flat
-        solo-inverted
-        hide-details
-        prepend-inner-icon="mdi-magnify"
-        label="Search"
-        class="hidden-sm-and-down"
-      />
-      <v-spacer />
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+          <SearchBar/>
+        
       <v-btn icon>
         <v-icon>mdi-apps</v-icon>
       </v-btn>
       <v-btn icon>
         <v-icon>mdi-bell</v-icon>
       </v-btn> 
+     
 
       <MenuProfile/>
       
@@ -127,9 +126,11 @@
 <script>
   import MenuProfile from '../components/Menus/LogoutMenu'
   import Navigator from '../components/Breadcrumbs/Navigator'
+  import SearchBar from '../components/Forms/SearchBar'
+  import SwitchTheme from '../components/Buttons/SwitchTheme'
   export default {
     components:{
-      MenuProfile,Navigator
+      MenuProfile,Navigator,SearchBar,SwitchTheme
 
     },
     name : 'MainLayout',

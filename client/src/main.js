@@ -7,8 +7,10 @@ import store from './store/index'
 import vuetify from './plugins/vuetify';
 import 'nprogress/nprogress.css'
 import VueSmartWidget from 'vue-smart-widget'
-Vue.use(VueSmartWidget)
+import VueFuse from 'vue-fuse'
 
+Vue.use(VueSmartWidget)
+Vue.use(VueFuse)
 
 
 Vue.config.productionTip = false

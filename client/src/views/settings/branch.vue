@@ -14,7 +14,7 @@
         
       >
         <template v-slot:top>
-          <v-toolbar flat color="white">
+          <v-toolbar >
             <v-toolbar-title>สาขา</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-text-field
