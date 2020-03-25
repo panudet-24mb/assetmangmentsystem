@@ -1,6 +1,6 @@
 <template>
   <div>
-    <smart-widget-grid :layout="layout">
+    <smart-widget-grid :layout="layout"  >
   <smart-widget slot="0" simple>
     <div class="layout-center">
       <h3>Simple Widget Without Header</h3>
@@ -11,7 +11,7 @@
       <h3>Default Widget With Header</h3>
     </div>
   </smart-widget>
-  <smart-widget slot="2" title="Full Screen" fullscreen>
+  <smart-widget slot="2" title="Full Screen" fullscreen :loading="true" >
     <div class="layout-center">
       <h3>Make any widget full screen</h3>
     </div>
