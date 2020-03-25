@@ -1,10 +1,12 @@
+import store from '../store'
 import env from '../env/index.js';
 import NProgress from 'nprogress'
 import axios from 'axios'
-import store from '../store'
 
-const token = localStorage.getItem('user')
-console.log(token)
+const token = localStorage.getItem('user');
+ if (token) {
+   store.commit('SET_USER_DATA', token)
+ }
 const apiClient = axios.create({
   baseURL: env.API_URL,
   withCredentials: false, 
@@ -14,7 +16,6 @@ const apiClient = axios.create({
     'Authorization': token
   }
 })
-
  apiClient.interceptors.response.use(
    response => response,
    error => {

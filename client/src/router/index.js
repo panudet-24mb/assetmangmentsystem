@@ -41,12 +41,20 @@ let router = new Router({
       path: "/dashboard",
       component: MainLayout,
       meta: {
-        requiresAuth: true
+        requiresAuth: true,
       },
        children: [
          {
            path: "/",
            component: DashBoard,
+             meta: {
+               breadcrumb: [{
+                   name: 'หน้าหลัก',
+                   link: '/dashboard'
+                 },
+                 
+               ]
+             }
 
          },
       ],
@@ -55,17 +63,43 @@ let router = new Router({
        path: "/settings",
        component: MainLayout,
        meta: {
-         requiresAuth: true
+         requiresAuth: true,
        },
        children: [{
            path: "/",
-           component: DashBoard,
+         component: DashBoard,
 
          },
          {
            path: "company",
            name: "company_settings",
            component: CompanySetting,
+           meta: {
+             breadcrumb: [
+               { name: 'หน้าหลัก' ,  link: '/dashboard'},
+               { name: 'ตั้งค่า' },
+               { name: 'บริษัท' }
+             ]
+           }
+
+         },
+           {
+             path: "branch",
+             name: "branch_settings",
+             component: BranchSetting,
+              meta: {
+                breadcrumb: [{
+                    name: 'หน้าหลัก',
+                    link: '/dashboard'
+                  },
+                  {
+                    name: 'ตั้งค่า'
+                  },
+                  {
+                    name: 'สาขา'
+                  }
+                ]
+              }
 
          },
          {
