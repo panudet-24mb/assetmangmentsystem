@@ -63,7 +63,7 @@
           Ecosystem
         </h2> -->
 
-        <v-row justify="center">
+        <!-- <v-row justify="center">
           <a
             v-for="(eco, i) in ecosystem"
             :key="i"
@@ -73,7 +73,7 @@
           >
             {{ eco.text }}
           </a>
-        </v-row>
+        </v-row> -->
       </v-col>
     </v-row>
   </v-container>

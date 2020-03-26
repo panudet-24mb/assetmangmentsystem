@@ -89,7 +89,7 @@
         class="ml-0 pl-4"
       >
         <span class="hidden-sm-and-down">ระบบจัดการทรัพย์สิน</span>
-       <SwitchTheme/>
+    
       </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
@@ -127,10 +127,10 @@
   import MenuProfile from '../components/Menus/LogoutMenu'
   import Navigator from '../components/Breadcrumbs/Navigator'
   import SearchBar from '../components/Forms/SearchBar'
-  import SwitchTheme from '../components/Buttons/SwitchTheme'
+ 
   export default {
     components:{
-      MenuProfile,Navigator,SearchBar,SwitchTheme
+      MenuProfile,Navigator,SearchBar
 
     },
     name : 'MainLayout',

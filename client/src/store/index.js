@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import * as user from '@/store/modules/user.js';
+import * as theme from '@/store/modules/theme.js';
 // change to module
 Vue.use(Vuex)
 
 const store =  new Vuex.Store({
   modules: {
-    user,
+    user, theme
   },
   state: {
      loader: {

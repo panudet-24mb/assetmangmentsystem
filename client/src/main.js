@@ -41,6 +41,17 @@ new Vue({
     if (userString) {
       this.$store.commit('SET_USER_DATA', userString)
     }
+     const ThemeSetting = localStorage.getItem('darkmode')
+    if (ThemeSetting == "true") {
+      let changeTheme = true
+      this.$vuetify.theme.dark = changeTheme
+    } else {
+       this.$vuetify.theme.dark = false
+      
+    }
+
+    
+   
    
   
   },

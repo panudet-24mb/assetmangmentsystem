@@ -68,19 +68,16 @@
         <v-divider></v-divider>
 
         <v-list>
-          <v-list-item>
+         
+
+            <v-list-item>
             <v-list-item-action>
-              <v-switch v-model="message" color="primary"></v-switch>
-            </v-list-item-action>
-            <v-list-item-title>Enable messages</v-list-item-title>
+                <SwitchTheme/>
+                </v-list-item-action>
+            <v-list-item-title>Dark Theme</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-action>
-              <v-switch v-model="hints" color="primary"></v-switch>
-            </v-list-item-action>
-            <v-list-item-title>Enable hints</v-list-item-title>
-          </v-list-item>
+
         </v-list>
 
         <v-card-actions>
@@ -97,8 +94,12 @@
 </template>
 
 <script>
+import SwitchTheme from '../Buttons/SwitchTheme'
 import apiClient from '../../services/AxiosService'
 export default {
+  components:{
+    SwitchTheme
+  },
     data: () => ({
       fav: true,
       menu: false,

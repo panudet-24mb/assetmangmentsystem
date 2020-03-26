@@ -1,20 +1,14 @@
 <template>
-  <div>
-    
-  
+<div>
+  {{$vuetify.theme.dark}}
       <v-switch
         v-model="$vuetify.theme.dark"
-        hide-details
-        inset
-        label="Theme Dark"
+        @change ="ThemeSetting"
       ></v-switch>
-   
 
-
+</div>
+         
  
-
-  </div>
-  
 </template>
 
 <script>
@@ -29,13 +23,22 @@
     data: vm => ({
       initialDark: vm.$vuetify
         ? vm.$vuetify.theme.dark
-        : false,
+        : true,
     }),
 
     beforeDestroy () {
       if (!this.$vuetify) return
-
       this.$vuetify.theme.dark = this.initialDark
     },
+    methods:{
+      ThemeSetting(){
+       if (this.$vuetify.theme.dark === true){
+          localStorage.setItem("darkmode", true);
+       }else{
+         localStorage.setItem("darkmode", false);
+       }
+      }
+
+    }
   }
 </script>
