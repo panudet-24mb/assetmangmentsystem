@@ -12,7 +12,7 @@
           class="elevation-1"
         >
           <template v-slot:top>
-            <v-toolbar flat color="white">
+            <v-toolbar flat>
               <v-toolbar-title>โมเดลรุ่น/แบบ/สี</v-toolbar-title>
               <v-spacer></v-spacer>
               <v-text-field
