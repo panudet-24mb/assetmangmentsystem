@@ -93,7 +93,7 @@ export default {
         })
         .catch(err => {
           this.error_message = err.response.data.error;
-          console.log(err);
+          
           this.$store.commit("LOADER", false);
           this.snackbar = true;
         });

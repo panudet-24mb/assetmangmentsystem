@@ -1,6 +1,6 @@
 <template>
 <div>
-  {{$vuetify.theme.dark}}
+
       <v-switch
         v-model="$vuetify.theme.dark"
         @change ="ThemeSetting"
