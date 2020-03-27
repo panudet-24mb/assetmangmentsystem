@@ -165,6 +165,8 @@
         },
 
         { icon: 'mdi-account-cog', text: 'ตั้งค่าผู้ใช้งาน' ,link:'/users/permission' },
+        { icon: 'mdi-database-import', text: 'นำเข้าทรัพท์สิน' ,link:'/import/assets' },
+        { icon: 'mdi-text-box-search-outline', text: 'ออกรายงาน' ,link:'/import/assets' },
       ],
     }),
   }
