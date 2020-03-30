@@ -14,7 +14,7 @@ const Role = db.role;
 
 // force: true will drop the table if it already exists
 db.sequelize.sync({
-  // force: true
+  force: false
 }).then(() => {
   console.log('Drop and Resync with { force: true }');
   initial();
@@ -29,6 +29,7 @@ var server = app.listen(3000, function () {
   var port = server.address().port
 
   console.log("App listening at http://%s:%s", host, port)
+  console.log("They told me that I need to build API v2")
 })
 
 
