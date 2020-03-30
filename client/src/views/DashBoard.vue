@@ -10,7 +10,7 @@
 
       </smart-widget>
 
-      <smart-widget slot="1" title="ผู้ใช้งานล่าสุด" fixedHeight="true">
+      <smart-widget slot="1" title="ผู้ใช้งานล่าสุด" fixedHeight:true>
         <div class="layout-center">
                 <simpletable/>
       

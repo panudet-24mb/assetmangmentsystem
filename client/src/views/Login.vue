@@ -64,11 +64,8 @@ export default {
     drawer: null,
     snackbar: false,
     valid: true,
-    // username: "",
-    //  username: "emasil@email.com",
     username: "",
     usernameRules: [v => !!v || "User is required"],
-    // password: "123456",
     password: "",
     passwordRules: [
       v => !!v || "Password is required",
@@ -92,8 +89,24 @@ export default {
           // this.$router.push('/dashboard');
         })
         .catch(err => {
-          this.error_message = err.response.data.error;
+          this.$store.commit("LOADER", true);
+          switch(err.response.status){
+            case 404:
           
+              this.error_message = "ไม่พบเจอผู้ใช้งาน"
+              
+       
+              break;
+              
+            case 401:
+
+              this.error_message = "รหัสผ่านไม่ถูกต้อง"
+              
+              break;
+
+          }
+         
+   
           this.$store.commit("LOADER", false);
           this.snackbar = true;
         });
@@ -102,48 +115,7 @@ export default {
     reset() {
       this.$refs.form.reset();
     }
-    // doLogin() {
-    //     const axios = require('axios');
-    //     axios.post("http://localhost:3000/api/v1/user/login", {
-    //         username:this.username,
-    //         password:this.password,
-    //     })
-    //     .then(response => {
-    //         this.result = response.data.data;
-    //         let token_api = this.result.api_token;
-
-    //         localStorage.setItem('user',token_api);
-
-    //         if(this.result.api_token){
-    //             axios.get("http://localhost:3000/api/v1/user/infomation", {
-    //                 headers: {
-    //                     'Authorization': this.result.api_token,
-    //                     'Content-Type': 'application/json'
-    //                 }
-    //             })
-    //             .then(response => {
-    //                 this.result = response.data;
-
-    //                 if(this.result.data){
-    //                     this.$store.state.user=this.result.data.id;
-    //                     this.$store.state.isLogin=true;
-    //                     this.$store.state.token=token_api,
-    //                     this.$router.push('/dashboard');
-
-    //                 }else{
-    //                     this.error_message=response.data.status;
-    //                     this.snackbar=true;
-    //                 }
-    //             })
-    //         }
-    //     })
-    //     .catch(e => {
-    //         if (e.response.status === 401) {
-    //             this.error_message=e.response.data.error;
-    //             this.snackbar=true;
-    //         }
-    //     });
-    // }
+  
   },
   mounted() {
     let self = this;

@@ -13,7 +13,7 @@ const apiClient = axios.create({
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'Authorization': token
+    'x-access-token': token
   }
 })
  apiClient.interceptors.response.use(

@@ -112,16 +112,16 @@ export default {
 
   methods:{
     initialize: (vm) => {
-      apiClient.get('/user/infomation').then((response) => {
-         vm.fullname = response.data.data.name
-         console.log(vm.fullname)
+      apiClient.get('/test/user').then((response) => {
+         vm.fullname = response.data.user.name
+        //  console.log(vm.fullname)
          
          setTimeout(()=>{
             vm.stateLoading = false
           },1500);
       })
       .catch((error) => {
-        console.log(error)
+        // console.log(error)
       });
     },
    logout () {
