@@ -12,26 +12,20 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Assets Mangments
+          Assets Management System
         </h1>
 
         <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
+          Developing Mode 70/100%
+          <br />
+          <a href="/login" target="_blank">Login here</a>
         </p>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
+      <v-col class="mb-5" cols="12">
+        <!--         <h2 class="headline font-weight-bold mb-3">
           What's next?
-        </h2>
+        </h2> -->
 
         <v-row justify="center">
           <a
@@ -46,13 +40,10 @@
         </v-row>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
+      <v-col class="mb-5" cols="12">
+        <!--         <h2 class="headline font-weight-bold mb-3">
           Important Links
-        </h2>
+        </h2> -->
 
         <v-row justify="center">
           <a
@@ -67,15 +58,12 @@
         </v-row>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
+      <v-col class="mb-5" cols="12">
+        <!--         <h2 class="headline font-weight-bold mb-3">
           Ecosystem
-        </h2>
+        </h2> -->
 
-        <v-row justify="center">
+        <!-- <v-row justify="center">
           <a
             v-for="(eco, i) in ecosystem"
             :key="i"
@@ -85,14 +73,16 @@
           >
             {{ eco.text }}
           </a>
-        </v-row>
+        </v-row> -->
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+/*
   export default {
+
     name: 'HelloWorld',
 
     data: () => ({
@@ -147,5 +137,5 @@
         },
       ],
     }),
-  }
+  }*/
 </script>
