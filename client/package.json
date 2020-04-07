@@ -5,11 +5,18 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "capacitor:build": "vue-cli-service capacitor:build",
+    "capacitor:serve": "vue-cli-service capacitor:serve"
   },
   "dependencies": {
+    "@capacitor/android": "^1.0.0",
+    "@capacitor/cli": "^1.0.0",
+    "@capacitor/core": "^1.0.0",
+    "@capacitor/ios": "^1.0.0",
     "apexcharts": "^3.17.0",
     "axios": "^0.19.2",
+    "capacitor": "^0.5.5",
     "chart.js": "^2.9.3",
     "core-js": "^3.6.4",
     "date-fns": "^2.11.0",
@@ -24,6 +31,7 @@
     "vuex": "^3.1.2"
   },
   "devDependencies": {
+    "@nklayman/vue-cli-plugin-capacitor": "^0.1.1",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-plugin-router": "~4.2.0",

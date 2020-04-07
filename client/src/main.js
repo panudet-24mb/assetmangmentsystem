@@ -8,6 +8,7 @@ import vuetify from './plugins/vuetify';
 import 'nprogress/nprogress.css'
 import VueSmartWidget from 'vue-smart-widget'
 import VueFuse from 'vue-fuse'
+import { Plugins } from 'capacitor'
 
 Vue.use(VueSmartWidget)
 Vue.use(VueFuse)
@@ -55,6 +56,7 @@ new Vue({
    
   
   },
+  
   
 
   render: h => h(App)
